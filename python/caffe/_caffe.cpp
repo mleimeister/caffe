@@ -275,9 +275,7 @@ BOOST_PYTHON_MODULE(_caffe) {
   bp::class_<vector<bool> >("BoolVec")
     .def(bp::vector_indexing_suite<vector<bool> >());
 
-  // boost python expects a void (missing) return value, while import_array
-  // returns NULL for python3. import_array1() forces a void return value.
-  import_array1();
+  import_array();
 }
 
 }  // namespace caffe
